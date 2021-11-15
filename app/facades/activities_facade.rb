@@ -1,7 +1,7 @@
 class ActivitiesFacade
   class << self
-    def get_activities(city_state)
-      event = MapQuestService.activity_location(city_state)
+    def get_activites(weather, city_state)
+      activites = ActivitiesService.request_activities(weather, city_state)
     end
   end
 end

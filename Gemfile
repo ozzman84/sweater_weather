@@ -25,6 +25,11 @@ gem 'figaro'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'rubocop', require: false
+gem 'jsonapi-serializer'
+gem 'json'
+# gem 'active_model_serializers'
+gem 'faraday'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'

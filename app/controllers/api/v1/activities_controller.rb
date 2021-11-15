@@ -1,5 +1,7 @@
 class Api::V1::ActivitiesController < ApplicationController
   def index
-    activities = ActivitiesFacade.get_activities(params[:destination])
+    city_state = params[:destination]
+    weather = WeatherFacade.get_weather(params[:destination])
+    activities = ActivitiesFacade.get_activites(weather, city_state)
   end
 end

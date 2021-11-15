@@ -5,9 +5,9 @@ class MapQuestClient
       parse_data(response)
     end
 
-    def activity_lat_long(activity_params)
-      response = conn.get(activities_params.merge(api_key))
-      parse_data(response, activity_params)
+    def activity_lat_long(uri)
+      response = conn.get(uri + api_key)
+      parse_data(response)
     end
 
     private
