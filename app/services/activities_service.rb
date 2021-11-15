@@ -1,7 +1,8 @@
 class ActivitiesService
   class << self
     def request_activities(activities_params, city_state)
-      activity_type = event_type(activities_params[:data][:attributes][:current_weather][:temperature])
+      temp = activities_params[:data][:attributes][:current_weather][:temperature]
+      activity_type = event_type(temp)
       summary = activities_params[:data][:attributes][:current_weather][:conditions]
       activities = ActivitiesClient.request_activities(uri, activity_type)
       event_params(activites, city_state, summary, activities_params[:data][:attributes][:current_weather][:temperature])
@@ -35,9 +36,6 @@ class ActivitiesService
         }
       }
     end
-    # def request_activites(temp)
-    #   binding.pry
-    # end
 
     def uri
       "/api/activity?"
