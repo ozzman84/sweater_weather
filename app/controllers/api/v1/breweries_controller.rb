@@ -2,8 +2,7 @@ class Api::V1::BreweriesController < ApplicationController
   def index
     weather = WeatherFacade.get_weather(params[:location])
     breweries = BreweriesFacade.get_breweries(weather, breweries_params)
-    binding.pry
-
+    render json: breweries.to_json
   end
 
   private

@@ -7,7 +7,7 @@ class WeatherPoro
     @current_weather = instantiator(params[:current], CurrentPoro)
     @daily_weather = instantiator(params[:daily], DailyPoro)
     @hourly_weather = instantiator(params[:hourly], HourlyPoro)
-    binding.pry
+    
   end
 
   def instantiator(params, object)
