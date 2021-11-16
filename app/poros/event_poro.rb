@@ -4,15 +4,14 @@ class EventPoro
               :forecast,
               :summary,
               :temperature,
-              :activites
+              :activities
 
   def initialize(params)
     @id = params[:id]
     @destination = params[:attributes][:destination]
-    @forecast = params[:attributes][:forecast]
-    @summary = params[:][:summary]
-    @temperature = params[:temperature]
-    @activites = gen_activities(params[:activites])
+    @summary = params[:attributes][:forecast][:summary]
+    @temperature = params[:attributes][:forecast][:temperature]
+    @activities = gen_activities(params[:attributes][:activities])
   end
 
   def gen_activities(params)

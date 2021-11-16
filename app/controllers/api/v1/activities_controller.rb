@@ -5,4 +5,12 @@ class Api::V1::ActivitiesController < ApplicationController
     activities = ActivitiesFacade.get_activites(weather, city_state)
     binding.pry
   end
+
+  private
+
+  def activity_params
+    {
+      destination: params[:destination]
+    }
+  end
 end
