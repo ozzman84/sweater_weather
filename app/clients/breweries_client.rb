@@ -3,7 +3,6 @@ class BreweriesClient
     def request_breweries(uri)
       response = conn.get(uri)
       parse_data(response)
-      binding.pry
     end
 
     private
