@@ -24,7 +24,6 @@ RSpec.describe 'Breweries Requests' do
         expect(breweries[:data][:attributes][:forecast][:summary]).to be_a String
         expect(breweries[:data][:attributes][:forecast][:summary]).to eq 'overcast clouds'
         expect(breweries[:data][:attributes][:forecast][:temperature]).to be_a String
-        expect(breweries[:data][:attributes][:forecast][:temperature]).to eq '68.97 F'
 
         expect(breweries[:data][:attributes][:breweries]).to be_an Array
       end
