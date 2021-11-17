@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Forecast Request' do
+RSpec.describe 'Forecast Request', :vcr do
   describe 'Index' do
     describe 'a valid city/state' do
       before { get '/api/v1/forecast?location=denver,co' }

@@ -54,13 +54,10 @@ RSpec.describe 'BreweriesService' do
 
       expect(breweries[:data][:attributes][:forecast]).to be_a Hash
       expect(breweries[:data][:attributes][:forecast][:summary]).to be_a String
-      expect(breweries[:data][:attributes][:forecast][:summary]).to eq 'overcast clouds'
       expect(breweries[:data][:attributes][:forecast][:temperature]).to be_a String
-      expect(breweries[:data][:attributes][:forecast][:temperature]).to eq '66.02 F'
 
       expect(breweries[:data][:attributes][:breweries]).to be_an Array
       # expect(breweries[:data][:attributes][:breweries]).to eq []
-
     end
   end
 end

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Activities Request' do
+RSpec.describe 'Activities Request', :vcr do
   describe 'Index' do
     describe 'Valide City/state' do
       before { get '/api/v1/activities?destination=chicago,il' }
