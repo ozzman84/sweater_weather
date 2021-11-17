@@ -7,8 +7,8 @@ describe 'Backgrounds Request' do
 
     it 'response is successful' do
       # get(api_v1_backgrounds(location: "denver,co"))
-      # get '/api/vi/backgrounds?location=denver,co'
-      get '/api/vi/backgrounds', params: {location: 'denver,co'}
+      get '/api/vi/backgrounds?location=denver,co'
+      # get '/api/vi/backgrounds', params: {location: 'denver,co'}
 
       expect(response).to be_successful
     end

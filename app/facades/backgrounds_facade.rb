@@ -8,7 +8,7 @@ class BackgroundsFacade
     private
 
     def image_selector(response)
-      binding.pry
+      response[:results][0]
     end
   end
 end
