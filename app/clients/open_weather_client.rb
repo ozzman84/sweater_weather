@@ -13,9 +13,9 @@ class OpenWeatherClient
 
     def conn
       Faraday.new("https://api.openweathermap.org", params: {
-        appid: ENV['open_weather_key'],
-        exclude: 'minutely,alerts',
-        units: 'imperial'
+          appid: ENV['open_weather_key'],
+          exclude: 'minutely,alerts',
+          units: 'imperial'
         }
       )
     end
