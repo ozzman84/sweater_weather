@@ -21,13 +21,5 @@ class BreweriesService
         }
       }
     end
-
-    # private
-    #
-    # def form_data(weather, params)
-    #   {
-    #
-    #   }
-    # end
   end
 end

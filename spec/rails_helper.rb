@@ -1,6 +1,6 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
-# require 'vcr'
+require 'vcr'
 require 'simplecov'
 SimpleCov.start
 ENV['RAILS_ENV'] ||= 'test'
@@ -34,17 +34,17 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 
-# VCR.configure do |c|
-#   c.cassette_library_dir = 'spec/vcr'
-#   c.hook_into :webmock
-#   c.configure_rspec_metadata!
-#   c.filter_sensitive_data('<MAPQUEST_KEY>') { ENV['mapquest_api_key'] }
-#   c.filter_sensitive_data('<OPENWEATHER_KEY>') { ENV['open_weather_api_key'] }
-#   # c.filter_sensitive_data('<UNSPLASH_KEY>') { ENV['unsplash_api_key'] }
-#   c.default_cassette_options = {
-#     match_requests_on: %i[method host path]
-#   }
-# end
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/vcr'
+  c.hook_into :webmock
+  c.configure_rspec_metadata!
+  c.filter_sensitive_data('<MAPQUEST_KEY>') { ENV['map_quest_key'] }
+  c.filter_sensitive_data('<OPENWEATHER_KEY>') { ENV['open_weather_key'] }
+  c.filter_sensitive_data('<UNSPLASH_KEY>') { ENV['unsplash_api_key'] }
+  c.default_cassette_options = {
+    match_requests_on: %i[method host path]
+  }
+end
 
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
