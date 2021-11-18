@@ -1,8 +1,9 @@
 class BackgroundsClient
   class << self
     def request_background(uri)
-      response = conn.get(uri)
+      response = conn.get(uri + api)
       parse_data(response)
+
     end
 
     private
@@ -13,6 +14,10 @@ class BackgroundsClient
 
     def conn
       Faraday.new('https://api.unsplash.com')
+    end
+
+    def api
+      "&client_id=#{ENV['unsplash_api_key']}"
     end
   end
 end

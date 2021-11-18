@@ -1,10 +1,10 @@
 class ImageSerializer
 
-  def serialize(response, location)
+  def self.custom_serialize(response, location)
     {
       "data": {
         "type": "image",
-        "id": null,
+        "id": nil,
         "attributes": {
           "location": location,
           "image_url": response[:urls][:full],

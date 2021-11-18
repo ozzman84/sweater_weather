@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe 'BreweriesService' do
-  describe 'Find Breweries' do
+RSpec.describe 'BreweriesService', :vcr do
+  describe 'Find Breweries', :vcr do
     let(:weather) { {
       :data=>
         {:id=>nil,

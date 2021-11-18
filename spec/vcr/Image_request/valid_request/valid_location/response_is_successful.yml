@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.unsplash.com/photos/random?client_id=<UNSPLASH_KEY>&query=denver
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1080'
+      Server:
+      - Cowboy
+      Content-Type:
+      - application/json
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Request-Method:
+      - "*"
+      Access-Control-Allow-Headers:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Link,X-Total,X-Per-Page,X-RateLimit-Limit,X-RateLimit-Remaining
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      X-Unsplash-Version:
+      - v1
+      Etag:
+      - W/"c692f963491f29b27249ec23f841b73d"
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Remaining:
+      - '48'
+      X-Request-Id:
+      - 7bf75535-a33c-4595-86f5-3e63743759dd
+      X-Runtime:
+      - '0.030008'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Via:
+      - 1.1 vegur, 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Thu, 18 Nov 2021 00:32:13 GMT
+      Age:
+      - '0'
+      X-Served-By:
+      - cache-dca12920-DCA, cache-den8237-DEN
+      X-Cache:
+      - MISS, MISS
+      X-Cache-Hits:
+      - 0, 0
+      X-Timer:
+      - S1637195533.286514,VS0,VE80
+      Vary:
+      - Accept-Encoding, Origin,Authorization,Accept
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"OH1DVOThvo0","created_at":"2021-01-24T01:30:32-05:00","updated_at":"2021-11-17T08:23:56-05:00","promoted_at":null,"width":3024,"height":4032,"color":"#262626","blur_hash":"LlE3emtRNGof_NozRjoLtlRjV@ay","description":null,"alt_description":"brown
+        rock formation near green trees during daytime","urls":{"raw":"https://images.unsplash.com/photo-1611469548216-e00148328d1f?ixid=MnwyNzYxNjN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MzcxOTU1MzM\u0026ixlib=rb-1.2.1","full":"https://images.unsplash.com/photo-1611469548216-e00148328d1f?crop=entropy\u0026cs=srgb\u0026fm=jpg\u0026ixid=MnwyNzYxNjN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MzcxOTU1MzM\u0026ixlib=rb-1.2.1\u0026q=85","regular":"https://images.unsplash.com/photo-1611469548216-e00148328d1f?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=MnwyNzYxNjN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MzcxOTU1MzM\u0026ixlib=rb-1.2.1\u0026q=80\u0026w=1080","small":"https://images.unsplash.com/photo-1611469548216-e00148328d1f?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=MnwyNzYxNjN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MzcxOTU1MzM\u0026ixlib=rb-1.2.1\u0026q=80\u0026w=400","thumb":"https://images.unsplash.com/photo-1611469548216-e00148328d1f?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=MnwyNzYxNjN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MzcxOTU1MzM\u0026ixlib=rb-1.2.1\u0026q=80\u0026w=200"},"links":{"self":"https://api.unsplash.com/photos/OH1DVOThvo0","html":"https://unsplash.com/photos/OH1DVOThvo0","download":"https://unsplash.com/photos/OH1DVOThvo0/download?ixid=MnwyNzYxNjN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MzcxOTU1MzM","download_location":"https://api.unsplash.com/photos/OH1DVOThvo0/download?ixid=MnwyNzYxNjN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MzcxOTU1MzM"},"categories":[],"likes":4,"liked_by_user":false,"current_user_collections":[],"sponsorship":null,"topic_submissions":{},"user":{"id":"GFjO4ELb_3c","updated_at":"2021-11-17T12:18:52-05:00","username":"ravi_patel","name":"Ravi
+        Patel","first_name":"Ravi","last_name":"Patel","twitter_username":"ravi_patel9","portfolio_url":null,"bio":"A
+        hobbyist photographer","location":"Toronto","links":{"self":"https://api.unsplash.com/users/ravi_patel","html":"https://unsplash.com/@ravi_patel","photos":"https://api.unsplash.com/users/ravi_patel/photos","likes":"https://api.unsplash.com/users/ravi_patel/likes","portfolio":"https://api.unsplash.com/users/ravi_patel/portfolio","following":"https://api.unsplash.com/users/ravi_patel/following","followers":"https://api.unsplash.com/users/ravi_patel/followers"},"profile_image":{"small":"https://images.unsplash.com/profile-1542249765832-2426acb65169?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=faces\u0026cs=tinysrgb\u0026fit=crop\u0026h=32\u0026w=32","medium":"https://images.unsplash.com/profile-1542249765832-2426acb65169?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=faces\u0026cs=tinysrgb\u0026fit=crop\u0026h=64\u0026w=64","large":"https://images.unsplash.com/profile-1542249765832-2426acb65169?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=faces\u0026cs=tinysrgb\u0026fit=crop\u0026h=128\u0026w=128"},"instagram_username":"ravipatel_1011","total_collections":2,"total_likes":115,"total_photos":172,"accepted_tos":true,"for_hire":true,"social":{"instagram_username":"ravipatel_1011","portfolio_url":null,"twitter_username":"ravi_patel9","paypal_email":null}},"exif":{"make":null,"model":null,"name":null,"exposure_time":null,"aperture":null,"focal_length":null,"iso":null},"location":{"title":"Denver,
+        CO, USA","name":"Denver, CO, USA","city":"Denver","country":"United States","position":{"latitude":39.739236,"longitude":-104.990251}},"views":19596,"downloads":155}'
+  recorded_at: Thu, 18 Nov 2021 00:32:13 GMT
+recorded_with: VCR 6.0.0
