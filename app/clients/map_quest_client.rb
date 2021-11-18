@@ -1,11 +1,6 @@
 class MapQuestClient
   class << self
-    def request_lat_long(uri)
-      response = conn.get(uri + api_key)
-      parse_data(response)
-    end
-
-    def activity_lat_long(uri)
+    def location_info(uri)
       response = conn.get(uri + api_key)
       parse_data(response)
     end

@@ -1,15 +1,9 @@
 class MapQuestService
   class << self
     def add_location(city_state)
-      location_data = MapQuestClient.request_lat_long("#{location_uri + city_state}")
+      location_data = MapQuestClient.location_info("#{location_uri + city_state}")
       lat_long = filter_data(location_data)
       OpenWeatherService.request_weather(lat_long)
-    end
-
-    def activity_location(city_state)
-      location_data = MapQuestClient.activity_lat_long("#{location_uri + city_state}")
-      lat_long = filter_data(location_data)
-      OpenWeatherService.activity_weather(lat_long, location: city_state)
     end
 
     private
@@ -24,13 +18,6 @@ class MapQuestService
         end
       end
       params
-    end
-
-    def activities_params(city_state)
-      {
-        uri: '/geocoding/v1/address?',
-        location: city_state
-      }
     end
 
     def location_uri

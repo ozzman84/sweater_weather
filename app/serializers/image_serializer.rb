@@ -3,7 +3,7 @@ class ImageSerializer
   def self.custom_serialize(response, location)
     {
       "data": {
-        "type": "image",
+        "type": 'image',
         "id": nil,
         "attributes": {
           "location": location,
